@@ -1,0 +1,2495 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Minecraft</title>
+
+        <style>
+            :root {
+                --grass_block_top: url('https://lh3.googleusercontent.com/240HmHlOpxlIV67P1eI5RKUo5Qvvvjudt8pZmvIfzGwhVnVWWYFw2S4axQr6oIzboHS-P68Frl3uJ43LohNGUKXOSI5RzIWaJKequfg=h600');
+                --grass_block_side: url('https://static.wikia.nocookie.net/minecraft_gamepedia/images/3/3b/Grass_Block_%28side_texture%29_JE2_BE2.png/revision/latest/scale-to-width-down/160?cb=20200921204925');
+                --obsidian: url('https://static.wikia.nocookie.net/minecraft_gamepedia/images/5/5a/Obsidian_%28texture%29_JE3_BE2.png/revision/latest/scale-to-width-down/160?cb=20201001140204');
+                --portal: url('https://c.tenor.com/dl9I8ZsL7tsAAAAC/nether-portal.gif');
+
+                --kam-x: 50%;
+                --kam-y: 50%;
+
+
+                /* Obsydian */
+    /* 1 warstwa */
+    --b1-pos-x: -75px;
+    --b1-pos-y: -125px;
+    --b1-pos-z: 25px;
+
+    --b2-pos-x: -25px;
+    --b2-pos-y: -125px;
+    --b2-pos-z: 25px;
+
+    --b3-pos-x: 25px;
+    --b3-pos-y: -125px;
+    --b3-pos-z: 25px;
+
+    --b4-pos-x: 75px;
+    --b4-pos-y: -125px;
+    --b4-pos-z: 25px;
+
+    /* 2 wasrtwa */
+    --b5-pos-x: -75px;
+    --b5-pos-y: -75px;
+    --b5-pos-z: 25px;
+
+    --b6-pos-x: 75px;
+    --b6-pos-y: -75px;
+    --b6-pos-z: 25px;
+
+    /* 3 warstwa */
+    --b7-pos-x: -75px;
+    --b7-pos-y: -25px;
+    --b7-pos-z: 25px;
+
+    --b8-pos-x: 75px;
+    --b8-pos-y: -25px;
+    --b8-pos-z: 25px;
+
+    /* 4 warstwa */
+    --b9-pos-x: -75px;
+    --b9-pos-y: 25px;
+    --b9-pos-z: 25px;
+
+    --b10-pos-x: 75px;
+    --b10-pos-y: 25px;
+    --b10-pos-z: 25px;
+
+    /* 5 warstwa */
+    --b11-pos-x: -75px;
+    --b11-pos-y: 75px;
+    --b11-pos-z: 25px;
+
+    --b12-pos-x: -25px;
+    --b12-pos-y: 75px;
+    --b12-pos-z: 25px;
+
+    --b13-pos-x: 25px;
+    --b13-pos-y: 75px;
+    --b13-pos-z: 25px;
+
+    --b14-pos-x: 75px;
+    --b14-pos-y: 75px;
+    --b14-pos-z: 25px;
+
+    /* Portal frame */
+    --pf-pos-x: -25px;
+    --pf-pos-y: -75px;
+    --pf-pos-z: 25px;
+            }
+            .bl {
+    background-image: var(--grass_block_side);
+    background-size: contain;
+}
+
+#bl1 {
+    transform: 
+        rotateX(-10deg)
+        rotateY(-45deg)
+        translate3d(125px, 75px, -150px);
+}
+#bl2 {
+    transform: 
+    rotateX(-10deg)
+    rotateY(-45deg)
+    translate3d(175px, 75px, -100px);
+}
+#bl3 {
+    transform: 
+        rotateX(-10deg)
+        rotateY(-45deg)
+        translate3d(175px, 125px, -50px);
+}
+#bl4 {
+    transform: 
+        rotateX(-10deg)
+        rotateY(-45deg)
+        translate3d(-175px, 125px, 0px);
+}
+
+#bl0 {
+    transform: 
+        rotateX(-10deg)
+        rotateY(-45deg)
+        translate3d(0px, 175px, 200px);
+}
+
+
+
+
+
+.br {
+    background-image: var(--grass_block_side);
+    background-size: contain;
+}
+
+#br1 {
+    transform: 
+        rotateX(-10deg)
+        rotateY(45deg)
+        translate3d(175px, 125px, 200px);
+}
+#br6 {
+    transform: 
+        rotateX(-10deg)
+        rotateY(45deg)
+        translate3d(125px, 125px, -50px);
+}
+#br7 {
+    transform: 
+        rotateX(-10deg)
+        rotateY(45deg)
+        translate3d(75px, 125px, -100px);
+}
+#br8 {
+    transform: 
+        rotateX(-10deg)
+        rotateY(45deg)
+        translate3d(25px, 125px, -150px);
+}
+
+#br0 {
+    transform: 
+        rotateX(-10deg)
+        rotateY(45deg)
+        translate3d(0px, 175px, 200px);
+}
+
+
+
+
+
+.bt {
+    background-image: var(--grass_block_top);
+    background-size: contain;
+}
+
+#bt1 {
+    transform: 
+        rotateX(80deg)
+        rotateZ(45deg)
+        translate3d(175px, -75px, -100px);
+}
+#bt2 {
+    transform: 
+        rotateX(80deg)
+        rotateZ(45deg)
+        translate3d(175px, -175px, -50px);
+}
+
+.obs {
+    background-image: var(--obsidian);
+    background-size: contain;
+}
+.por {
+    background-image: var(--portal);
+    background-size: contain;
+
+}
+
+#p1b {
+    transform: 
+        rotateX(-100deg)
+        rotateZ(-45deg)
+        translate3d(var(--b1-pos-x), calc(var(--b1-pos-z) * -1), calc(var(--b1-pos-y) * -1 + 25px));
+}
+
+/* Portal frame */
+#pf {
+    opacity: 80%;
+    transform: 
+        rotateX(-10deg)
+        rotateY(-45deg)
+        translate3d(var(--pf-pos-x), calc(var(--pf-pos-y) * -1), calc(var(--pf-pos-z) + 5px));
+}
+
+#p1t {
+    transform: 
+        rotateX(80deg)
+        rotateZ(45deg)
+        translate3d(var(--b1-pos-x), var(--b1-pos-z), calc(var(--b1-pos-y) + 25px));
+}
+#p1l {
+    transform: 
+        rotateX(-10deg)
+        rotateY(-45deg)
+        translate3d(var(--b1-pos-x), calc(var(--b1-pos-y) * -1), calc(var(--b1-pos-z) + 25px));
+}
+#p1r {
+    transform: 
+        rotateX(-10deg)
+        rotateY(45deg)
+        translate3d(calc(var(--b1-pos-z) * -1), calc(var(--b1-pos-y) * -1), calc(var(--b1-pos-x) + 25px));
+}
+#p1b {
+    transform: 
+        rotateX(-100deg)
+        rotateZ(-45deg)
+        translate3d(var(--b1-pos-x), calc(var(--b1-pos-z) * -1), calc(var(--b1-pos-y) * -1 + 25px));
+}
+
+#p2t {
+    transform: 
+        rotateX(80deg)
+        rotateZ(45deg)
+        translate3d(var(--b2-pos-x), var(--b2-pos-z), calc(var(--b2-pos-y) + 25px));
+}
+#p2l {
+    transform: 
+        rotateX(-10deg)
+        rotateY(-45deg)
+        translate3d(var(--b2-pos-x), calc(var(--b2-pos-y) * -1), calc(var(--b2-pos-z) + 25px));
+}
+#p2r {
+    transform: 
+        rotateX(-10deg)
+        rotateY(45deg)
+        translate3d(calc(var(--b2-pos-z) * -1), calc(var(--b2-pos-y) * -1), calc(var(--b2-pos-x) + 25px));
+}
+#p2b {
+    transform: 
+        rotateX(-100deg)
+        rotateZ(-45deg)
+        translate3d(var(--b2-pos-x), calc(var(--b2-pos-z) * -1), calc(var(--b2-pos-y) * -1 + 25px));
+}
+
+#p3t {
+    transform: 
+        rotateX(80deg)
+        rotateZ(45deg)
+        translate3d(var(--b3-pos-x), var(--b3-pos-z), calc(var(--b3-pos-y) + 25px));
+}
+#p3l {
+    transform: 
+        rotateX(-10deg)
+        rotateY(-45deg)
+        translate3d(var(--b3-pos-x), calc(var(--b3-pos-y) * -1), calc(var(--b3-pos-z) + 25px));
+}
+#p3r {
+    transform: 
+        rotateX(-10deg)
+        rotateY(45deg)
+        translate3d(calc(var(--b3-pos-z) * -1), calc(var(--b3-pos-y) * -1), calc(var(--b3-pos-x) + 25px));
+}
+#p3b {
+    transform: 
+        rotateX(-100deg)
+        rotateZ(-45deg)
+        translate3d(var(--b3-pos-x), calc(var(--b3-pos-z) * -1), calc(var(--b3-pos-y) * -1 + 25px));
+}
+
+#p4t {
+    transform: 
+        rotateX(80deg)
+        rotateZ(45deg)
+        translate3d(var(--b4-pos-x), var(--b4-pos-z), calc(var(--b4-pos-y) + 25px));
+}
+#p4l {
+    transform: 
+        rotateX(-10deg)
+        rotateY(-45deg)
+        translate3d(var(--b4-pos-x), calc(var(--b4-pos-y) * -1), calc(var(--b4-pos-z) + 25px));
+}
+#p4r {
+    transform: 
+        rotateX(-10deg)
+        rotateY(45deg)
+        translate3d(calc(var(--b4-pos-z) * -1), calc(var(--b4-pos-y) * -1), calc(var(--b4-pos-x) + 25px));
+}
+#p4b {
+    transform: 
+        rotateX(-100deg)
+        rotateZ(-45deg)
+        translate3d(var(--b4-pos-x), calc(var(--b4-pos-z) * -1), calc(var(--b4-pos-y) * -1 + 25px));
+}
+
+#p5t {
+    transform: 
+        rotateX(80deg)
+        rotateZ(45deg)
+        translate3d(var(--b5-pos-x), var(--b5-pos-z), calc(var(--b5-pos-y) + 25px));
+}
+#p5l {
+    transform: 
+        rotateX(-10deg)
+        rotateY(-45deg)
+        translate3d(var(--b5-pos-x), calc(var(--b5-pos-y) * -1), calc(var(--b5-pos-z) + 25px));
+}
+#p5r {
+    transform: 
+        rotateX(-10deg)
+        rotateY(45deg)
+        translate3d(calc(var(--b5-pos-z) * -1), calc(var(--b5-pos-y) * -1), calc(var(--b5-pos-x) + 25px));
+}
+#p5b {
+    transform: 
+        rotateX(-100deg)
+        rotateZ(-45deg)
+        translate3d(var(--b5-pos-x), calc(var(--b5-pos-z) * -1), calc(var(--b5-pos-y) * -1 + 25px));
+}
+
+#p6t {
+    transform: 
+        rotateX(80deg)
+        rotateZ(45deg)
+        translate3d(var(--b6-pos-x), var(--b6-pos-z), calc(var(--b6-pos-y) + 25px));
+}
+#p6l {
+    transform: 
+        rotateX(-10deg)
+        rotateY(-45deg)
+        translate3d(var(--b6-pos-x), calc(var(--b6-pos-y) * -1), calc(var(--b6-pos-z) + 25px));
+}
+#p6r {
+    transform: 
+        rotateX(-10deg)
+        rotateY(45deg)
+        translate3d(calc(var(--b6-pos-z) * -1), calc(var(--b6-pos-y) * -1), calc(var(--b6-pos-x) + 25px));
+}
+#p6b {
+    transform: 
+        rotateX(-100deg)
+        rotateZ(-45deg)
+        translate3d(var(--b6-pos-x), calc(var(--b6-pos-z) * -1), calc(var(--b6-pos-y) * -1 + 25px));
+}
+
+#p7t {
+    transform: 
+        rotateX(80deg)
+        rotateZ(45deg)
+        translate3d(var(--b7-pos-x), var(--b7-pos-z), calc(var(--b7-pos-y) + 25px));
+}
+#p7l {
+    transform: 
+        rotateX(-10deg)
+        rotateY(-45deg)
+        translate3d(var(--b7-pos-x), calc(var(--b7-pos-y) * -1), calc(var(--b7-pos-z) + 25px));
+}
+#p7r {
+    transform: 
+        rotateX(-10deg)
+        rotateY(45deg)
+        translate3d(calc(var(--b7-pos-z) * -1), calc(var(--b7-pos-y) * -1), calc(var(--b7-pos-x) + 25px));
+}
+#p7b {
+    transform: 
+        rotateX(-100deg)
+        rotateZ(-45deg)
+        translate3d(var(--b7-pos-x), calc(var(--b7-pos-z) * -1), calc(var(--b7-pos-y) * -1 + 25px));
+}
+
+#p8t {
+    transform: 
+        rotateX(80deg)
+        rotateZ(45deg)
+        translate3d(var(--b8-pos-x), var(--b8-pos-z), calc(var(--b8-pos-y) + 25px));
+}
+#p8l {
+    transform: 
+        rotateX(-10deg)
+        rotateY(-45deg)
+        translate3d(var(--b8-pos-x), calc(var(--b8-pos-y) * -1), calc(var(--b8-pos-z) + 25px));
+}
+#p8r {
+    transform: 
+        rotateX(-10deg)
+        rotateY(45deg)
+        translate3d(calc(var(--b8-pos-z) * -1), calc(var(--b8-pos-y) * -1), calc(var(--b8-pos-x) + 25px));
+}
+#p8b {
+    transform: 
+        rotateX(-100deg)
+        rotateZ(-45deg)
+        translate3d(var(--b8-pos-x), calc(var(--b8-pos-z) * -1), calc(var(--b8-pos-y) * -1 + 25px));
+}
+
+#p9t {
+    transform: 
+        rotateX(80deg)
+        rotateZ(45deg)
+        translate3d(var(--b9-pos-x), var(--b9-pos-z), calc(var(--b9-pos-y) + 25px));
+}
+#p9l {
+    transform: 
+        rotateX(-10deg)
+        rotateY(-45deg)
+        translate3d(var(--b9-pos-x), calc(var(--b9-pos-y) * -1), calc(var(--b9-pos-z) + 25px));
+}
+#p9r {
+    transform: 
+        rotateX(-10deg)
+        rotateY(45deg)
+        translate3d(calc(var(--b9-pos-z) * -1), calc(var(--b9-pos-y) * -1), calc(var(--b9-pos-x) + 25px));
+}
+#p9b {
+    transform: 
+        rotateX(-100deg)
+        rotateZ(-45deg)
+        translate3d(var(--b9-pos-x), calc(var(--b9-pos-z) * -1), calc(var(--b9-pos-y) * -1 + 25px));
+}
+
+#p10t {
+    transform: 
+        rotateX(80deg)
+        rotateZ(45deg)
+        translate3d(var(--b10-pos-x), var(--b10-pos-z), calc(var(--b10-pos-y) + 25px));
+}
+#p10l {
+    transform: 
+        rotateX(-10deg)
+        rotateY(-45deg)
+        translate3d(var(--b10-pos-x), calc(var(--b10-pos-y) * -1), calc(var(--b10-pos-z) + 25px));
+}
+#p10r {
+    transform: 
+        rotateX(-10deg)
+        rotateY(45deg)
+        translate3d(calc(var(--b10-pos-z) * -1), calc(var(--b10-pos-y) * -1), calc(var(--b10-pos-x) + 25px));
+}
+#p10b {
+    transform: 
+        rotateX(-100deg)
+        rotateZ(-45deg)
+        translate3d(var(--b10-pos-x), calc(var(--b10-pos-z) * -1), calc(var(--b10-pos-y) * -1 + 25px));
+}
+
+#p11t {
+    transform: 
+        rotateX(80deg)
+        rotateZ(45deg)
+        translate3d(var(--b11-pos-x), var(--b11-pos-z), calc(var(--b11-pos-y) + 25px));
+}
+#p11l {
+    transform: 
+        rotateX(-10deg)
+        rotateY(-45deg)
+        translate3d(var(--b11-pos-x), calc(var(--b11-pos-y) * -1), calc(var(--b11-pos-z) + 25px));
+}
+#p11r {
+    transform: 
+        rotateX(-10deg)
+        rotateY(45deg)
+        translate3d(calc(var(--b11-pos-z) * -1), calc(var(--b11-pos-y) * -1), calc(var(--b11-pos-x) + 25px));
+}
+#p11b {
+    transform: 
+        rotateX(-100deg)
+        rotateZ(-45deg)
+        translate3d(var(--b11-pos-x), calc(var(--b11-pos-z) * -1), calc(var(--b11-pos-y) * -1 + 25px));
+}
+
+#p12t {
+    transform: 
+        rotateX(80deg)
+        rotateZ(45deg)
+        translate3d(var(--b12-pos-x), var(--b12-pos-z), calc(var(--b12-pos-y) + 25px));
+}
+#p12l {
+    transform: 
+        rotateX(-10deg)
+        rotateY(-45deg)
+        translate3d(var(--b12-pos-x), calc(var(--b12-pos-y) * -1), calc(var(--b12-pos-z) + 25px));
+}
+#p12r {
+    transform: 
+        rotateX(-10deg)
+        rotateY(45deg)
+        translate3d(calc(var(--b12-pos-z) * -1), calc(var(--b12-pos-y) * -1), calc(var(--b12-pos-x) + 25px));
+}
+#p12b {
+    transform: 
+        rotateX(-100deg)
+        rotateZ(-45deg)
+        translate3d(var(--b12-pos-x), calc(var(--b12-pos-z) * -1), calc(var(--b12-pos-y) * -1 + 25px));
+}
+
+#p13t {
+    transform: 
+        rotateX(80deg)
+        rotateZ(45deg)
+        translate3d(var(--b13-pos-x), var(--b13-pos-z), calc(var(--b13-pos-y) + 25px));
+}
+#p13l {
+    transform: 
+        rotateX(-10deg)
+        rotateY(-45deg)
+        translate3d(var(--b13-pos-x), calc(var(--b13-pos-y) * -1), calc(var(--b13-pos-z) + 25px));
+}
+#p13r {
+    transform: 
+        rotateX(-10deg)
+        rotateY(45deg)
+        translate3d(calc(var(--b13-pos-z) * -1), calc(var(--b13-pos-y) * -1), calc(var(--b13-pos-x) + 25px));
+}
+#p13b {
+    transform: 
+        rotateX(-100deg)
+        rotateZ(-45deg)
+        translate3d(var(--b13-pos-x), calc(var(--b13-pos-z) * -1), calc(var(--b13-pos-y) * -1 + 25px));
+}
+
+#p14t {
+    transform: 
+        rotateX(80deg)
+        rotateZ(45deg)
+        translate3d(var(--b14-pos-x), var(--b14-pos-z), calc(var(--b14-pos-y) + 25px));
+}
+#p14l {
+    transform: 
+        rotateX(-10deg)
+        rotateY(-45deg)
+        translate3d(var(--b14-pos-x), calc(var(--b14-pos-y) * -1), calc(var(--b14-pos-z) + 25px));
+}
+#p14r {
+    transform: 
+        rotateX(-10deg)
+        rotateY(45deg)
+        translate3d(calc(var(--b14-pos-z) * -1), calc(var(--b14-pos-y) * -1), calc(var(--b14-pos-x) + 25px));
+}
+#p14b {
+    transform: 
+        rotateX(-100deg)
+        rotateZ(-45deg)
+        translate3d(var(--b14-pos-x), calc(var(--b14-pos-z) * -1), calc(var(--b14-pos-y) * -1 + 25px));
+}
+@keyframes obst {
+    0% {
+        transform: 
+        rotateX(80deg)
+        rotateZ(45deg)
+        translate3d(var(--pos-x), var(--pos-z), calc(var(--pos-y) + 25px));
+        animation-timing-function: ease-in;
+    }
+    3% {
+        transform: 
+        rotateX(80deg)
+        rotateZ(45deg)
+        translate3d(var(--pos-x), var(--pos-z), calc(var(--pos-y)))
+        scale(0, 0);
+        animation-timing-function: ease-in;
+    }
+    20% {
+        transform: 
+        rotateX(80deg)
+        rotateZ(45deg)
+        translate3d(var(--pos-x), var(--pos-z), calc(var(--pos-y) + var(--ani-hei)))
+        scale(0, 0);
+    }
+    23% {
+        transform: 
+        rotateX(80deg)
+        rotateZ(45deg)
+        translate3d(var(--pos-x), var(--pos-z), calc(var(--pos-y) + var(--ani-hei) + 25px))
+        scale(1, 1);
+        animation-timing-function: ease-in;
+    }
+    30% {
+        transform: 
+        rotateX(80deg)
+        rotateZ(45deg)
+        translate3d(var(--pos-x), var(--pos-z), calc(var(--pos-y) + 25px));
+        animation-timing-function: ease-in;
+    }
+    100% {
+        animation-timing-function: ease-in;
+    }
+}
+
+@keyframes obsl {
+    0% {
+        transform: 
+        rotateX(-10deg)
+        rotateY(-45deg)
+        translate3d(var(--pos-x), calc(var(--pos-y) * -1), calc(var(--pos-z) + 25px));
+        animation-timing-function: ease-in;
+    }
+    3% {
+        transform: 
+        rotateX(-10deg)
+        rotateY(-45deg)
+        translate3d(var(--pos-x), calc(var(--pos-y) * -1), calc(var(--pos-z)))
+        scale(0, 0);
+        animation-timing-function: ease-in;
+    }
+    20% {
+        transform: 
+        rotateX(-10deg)
+        rotateY(-45deg)
+        translate3d(var(--pos-x), calc(var(--pos-y) * -1 - var(--ani-hei)), calc(var(--pos-z)))
+        scale(0, 0);
+    }
+    23% {
+        transform: 
+        rotateX(-10deg)
+        rotateY(-45deg)
+        translate3d(var(--pos-x), calc(var(--pos-y) * -1 - var(--ani-hei)), calc(var(--pos-z) + 25px))
+        scale(1, 1);
+        animation-timing-function: ease-in;
+    }
+    30% {
+        transform: 
+        rotateX(-10deg)
+        rotateY(-45deg)
+        translate3d(var(--pos-x), calc(var(--pos-y) * -1), calc(var(--pos-z) + 25px));
+        animation-timing-function: ease-in;
+    }
+    100% {
+        animation-timing-function: ease-in;
+    }
+}
+
+/* Secret :> Krulik2017 */
+
+@keyframes obsr {
+    0% {
+        transform: 
+        rotateX(-10deg)
+        rotateY(45deg)
+        translate3d(calc(var(--pos-z) * -1), calc(var(--pos-y) * -1), calc(var(--pos-x) + 25px));
+        animation-timing-function: ease-in;
+    }
+    3% {
+        transform: 
+        rotateX(-10deg)
+        rotateY(45deg)
+        translate3d(calc(var(--pos-z) * -1), calc(var(--pos-y) * -1), calc(var(--pos-x)))
+        scale(0, 0);
+        animation-timing-function: ease-in;
+    }
+    20% {
+        transform: 
+        rotateX(-10deg)
+        rotateY(45deg)
+        translate3d(calc(var(--pos-z) * -1), calc(var(--pos-y) * -1 - var(--ani-hei)), calc(var(--pos-x)))
+        scale(0, 0);
+    }
+    23% {
+        transform: 
+        rotateX(-10deg)
+        rotateY(45deg)
+        translate3d(calc(var(--pos-z) * -1), calc(var(--pos-y) * -1 - var(--ani-hei)), calc(var(--pos-x) + 25px))
+        scale(1, 1);
+        animation-timing-function: ease-in;
+    }
+    30% {
+        transform: 
+        rotateX(-10deg)
+        rotateY(45deg)
+        translate3d(calc(var(--pos-z) * -1), calc(var(--pos-y) * -1), calc(var(--pos-x) + 25px));
+        animation-timing-function: ease-in;
+    }
+    100% {
+        animation-timing-function: ease-in;
+    }
+}
+
+@keyframes obsb {
+    0% {
+        transform: 
+        rotateX(-100deg)
+        rotateZ(-45deg)
+        translate3d(var(--pos-x), calc(var(--pos-z) * -1), calc(var(--pos-y) * -1 + 25px));
+        animation-timing-function: ease-in;
+    }
+    3% {
+        transform: 
+        rotateX(-100deg)
+        rotateZ(-45deg)
+        translate3d(var(--pos-x), calc(var(--pos-z) * -1), calc(var(--pos-y) * -1))
+        scale(0, 0);
+        animation-timing-function: ease-in;
+    }
+    20% {
+        transform: 
+        rotateX(-100deg)
+        rotateZ(-45deg)
+        translate3d(var(--pos-x), calc(var(--pos-z) * -1), calc(var(--pos-y) * -1 - var(--ani-hei)))
+        scale(0, 0);
+    }
+    23% {
+        transform: 
+        rotateX(-100deg)
+        rotateZ(-45deg)
+        translate3d(var(--pos-x), calc(var(--pos-z) * -1), calc(var(--pos-y) * -1 - var(--ani-hei) + 25px))
+        scale(1, 1);
+        animation-timing-function: ease-in;
+    }
+    30% {
+        transform: 
+        rotateX(-100deg)
+        rotateZ(-45deg)
+        translate3d(var(--pos-x), calc(var(--pos-z) * -1), calc(var(--pos-y) * -1 + 25px));
+        animation-timing-function: ease-in;
+    }
+    100% {
+        animation-timing-function: ease-in;
+    }
+}
+
+@keyframes portal_frame {
+    1% {
+        opacity: 0%;
+    }
+    59% {
+        opacity: 0%;
+    }
+    60% {
+        opacity: 80%;
+    }
+}
+
+:root { /* Wysokość z jakiej spada */
+    --ani-hei: 300px;
+}
+
+.pt {
+    animation-name: obst;
+}
+.pl {
+    animation-name: obsl;
+}
+.pr {
+    animation-name: obsr;
+}
+.pb {
+    animation-name: obsb;
+}
+.obs, #pf {
+    animation-iteration-count: infinite;
+}
+
+
+
+#pf {
+    animation-name: portal_frame;
+    animation-duration: 15s;
+}
+
+
+#p1t, #p1l, #p1r, #p1b {
+    --pos-x: var(--b1-pos-x);
+    --pos-y: var(--b1-pos-y);
+    --pos-z: var(--b1-pos-z);
+
+    animation-duration: 15s;
+    animation-delay: 0.25s;
+}
+
+#p2t, #p2l, #p2r, #p2b {
+    --pos-x: var(--b2-pos-x);
+    --pos-y: var(--b2-pos-y);
+    --pos-z: var(--b2-pos-z);
+
+    animation-duration: 15s;
+    animation-delay: 0.5s;
+}
+
+#p3t, #p3l, #p3r, #p3b {
+    --pos-x: var(--b3-pos-x);
+    --pos-y: var(--b3-pos-y);
+    --pos-z: var(--b3-pos-z);
+
+    animation-duration: 15s;
+    animation-delay: 0.75s;
+}
+
+#p4t, #p4l, #p4r, #p4b {
+    --pos-x: var(--b4-pos-x);
+    --pos-y: var(--b4-pos-y);
+    --pos-z: var(--b4-pos-z);
+
+    animation-duration: 15s;
+    animation-delay: 1s;
+}
+
+#p5t, #p5l, #p5r, #p5b {
+    --pos-x: var(--b5-pos-x);
+    --pos-y: var(--b5-pos-y);
+    --pos-z: var(--b5-pos-z);
+
+    animation-duration: 15s;
+    animation-delay: 1.25s;
+}
+
+#p6t, #p6l, #p6r, #p6b {
+    --pos-x: var(--b6-pos-x);
+    --pos-y: var(--b6-pos-y);
+    --pos-z: var(--b6-pos-z);
+
+    animation-duration: 15s;
+    animation-delay: 1.5s;
+}
+
+#p7t, #p7l, #p7r, #p7b {
+    --pos-x: var(--b7-pos-x);
+    --pos-y: var(--b7-pos-y);
+    --pos-z: var(--b7-pos-z);
+
+    animation-duration: 15s;
+    animation-delay: 1.75s;
+}
+
+#p8t, #p8l, #p8r, #p8b {
+    --pos-x: var(--b8-pos-x);
+    --pos-y: var(--b8-pos-y);
+    --pos-z: var(--b8-pos-z);
+
+    animation-duration: 15s;
+    animation-delay: 2s;
+}
+
+#p9t, #p9l, #p9r, #p9b {
+    --pos-x: var(--b9-pos-x);
+    --pos-y: var(--b9-pos-y);
+    --pos-z: var(--b9-pos-z);
+
+    animation-duration: 15s;
+    animation-delay: 2.25s;
+}
+
+#p10t, #p10l, #p10r, #p10b {
+    --pos-x: var(--b10-pos-x);
+    --pos-y: var(--b10-pos-y);
+    --pos-z: var(--b10-pos-z);
+
+    animation-duration: 15s;
+    animation-delay: 2.5s;
+}
+
+#p11t, #p11l, #p11r, #p11b {
+    --pos-x: var(--b11-pos-x);
+    --pos-y: var(--b11-pos-y);
+    --pos-z: var(--b11-pos-z);
+
+    animation-duration: 15s;
+    animation-delay: 2.75s;
+}
+
+#p12t, #p12l, #p12r, #p12b {
+    --pos-x: var(--b12-pos-x);
+    --pos-y: var(--b12-pos-y);
+    --pos-z: var(--b12-pos-z);
+
+    animation-duration: 15s;
+    animation-delay: 3s;
+}
+
+#p13t, #p13l, #p13r, #p13b {
+    --pos-x: var(--b13-pos-x);
+    --pos-y: var(--b13-pos-y);
+    --pos-z: var(--b13-pos-z);
+
+    animation-duration: 15s;
+    animation-delay: 3.25s;
+}
+
+#p14t, #p14l, #p14r, #p14b {
+    --pos-x: var(--b14-pos-x);
+    --pos-y: var(--b14-pos-y);
+    --pos-z: var(--b14-pos-z);
+
+    animation-duration: 15s;
+    animation-delay: 3.5s;
+}
+.camel {
+    position: absolute;
+    width: 20%;
+    height: 20%;
+    z-index: 10;
+}
+
+#kam1 {
+    top: 0vh;
+    left: 0vw;
+}
+#kam1:hover ~ #scena {
+    perspective-origin: 30% 30% ;
+}
+
+#kam2 {
+    top: 0vh;
+    left: 20vw;
+}
+#kam2:hover ~ #scena {
+    perspective-origin: 40% 30%;
+}
+
+#kam3 {
+    top: 0vh;
+    left: 40vw;
+}
+#kam3:hover ~ #scena {
+    perspective-origin: 50% 30%;
+}
+
+#kam4 {
+    top: 0vh;
+    left: 60vw;
+}
+#kam4:hover ~ #scena {
+    perspective-origin: 60% 30%;
+}
+
+#kam5 {
+    top: 0vh;
+    left: 80vw;
+}
+#kam5:hover ~ #scena {
+    perspective-origin: 70% 30%;
+}
+
+#kam6 {
+    top: 20vh;
+    left: 0vw;
+}
+#kam6:hover ~ #scena {
+    perspective-origin: 30% 40%;
+}
+
+#kam7 {
+    top: 20vh;
+    left: 20vw;
+}
+#kam7:hover ~ #scena {
+    perspective-origin: 40% 40%;
+}
+
+#kam8 {
+    top: 20vh;
+    left: 40vw;
+}
+#kam8:hover ~ #scena {
+    perspective-origin: 50% 40%;
+}
+
+#kam9 {
+    top: 20vh;
+    left: 60vw;
+}
+#kam9:hover ~ #scena {
+    perspective-origin: 60% 40%;
+}
+
+#kam10 {
+    top: 20vh;
+    left: 80vw;
+}
+#kam10:hover ~ #scena {
+    perspective-origin: 70% 40%;
+}
+
+#kam11 {
+    top: 40vh;
+    left: 0vw;
+}
+#kam11:hover ~ #scena {
+    perspective-origin: 30% 50%;
+}
+
+#kam12 {
+    top: 40vh;
+    left: 20vw;
+}
+#kam12:hover ~ #scena {
+    perspective-origin: 40% 50%;
+}
+
+#kam13 {
+    top: 40vh;
+    left: 40vw;
+}
+#kam13:hover ~ #scena {
+    perspective-origin: 50% 50%;
+}
+
+#kam14 {
+    top: 40vh;
+    left: 60vw;
+}
+#kam14:hover ~ #scena {
+    perspective-origin: 60% 50%;
+}
+
+#kam15 {
+    top: 40vh;
+    left: 80vw;
+}
+#kam15:hover ~ #scena {
+    perspective-origin: 70% 50%;
+}
+
+#kam16 {
+    top: 60vh;
+    left: 0vw;
+}
+#kam16:hover ~ #scena {
+    perspective-origin: 30% 60%;
+}
+
+#kam17 {
+    top: 60vh;
+    left: 20vw;
+}
+#kam17:hover ~ #scena {
+    perspective-origin: 40% 60%;
+}
+
+#kam18 {
+    top: 60vh;
+    left: 40vw;
+}
+#kam18:hover ~ #scena {
+    perspective-origin: 50% 60%;
+}
+
+#kam19 {
+    top: 60vh;
+    left: 60vw;
+}
+#kam19:hover ~ #scena {
+    perspective-origin: 60% 60%;
+}
+
+#kam20 {
+    top: 60vh;
+    left: 80vw;
+}
+#kam20:hover ~ #scena {
+    perspective-origin: 70% 60%;
+}
+
+#kam21 {
+    top: 80vh;
+    left: 0vw;
+}
+#kam21:hover ~ #scena {
+    perspective-origin: 30% 70%;
+}
+
+#kam22 {
+    top: 80vh;
+    left: 20vw;
+}
+#kam22:hover ~ #scena {
+    perspective-origin: 40% 70%;
+}
+
+#kam23 {
+    top: 80vh;
+    left: 40vw;
+}
+#kam23:hover ~ #scena {
+    perspective-origin: 50% 70%;
+}
+
+#kam24 {
+    top: 80vh;
+    left: 60vw;
+}
+#kam24:hover ~ #scena {
+    perspective-origin: 60% 70%;
+}
+
+#kam25 {
+    top: 80vh;
+    left: 80vw;
+}
+#kam25:hover ~ #scena {
+    perspective-origin: 70% 70%;
+}
+:root {
+    --shad-brig: 40%; /* shadows brightnes */
+}
+
+#br1, #br6, #br7, #br8, #br0,
+#p1r, #p2r, #p3r, #p4r, #p5r, #p6r, #p7r, #p8r, #p9r, #p10r, #p11r, #p12r, #p13r, #p14r {
+    filter: brightness(var(--shad-brig));
+}
+
+.cien_trawy, #cien_trawy_podloga, #cien_trawy_pod_2 {
+    position: absolute;
+    background-color: black;
+    filter: opacity(calc(100% - var(--shad-brig)));
+}
+
+.cien_trawy {
+    transform: skewY(45deg);
+    transform-origin: left center;
+}
+#cien_trawy_podloga {
+    top: 50px;
+    left: 50px;
+    width: 150px;
+    height: 150px;
+    transform: skewY(-45deg);
+    transform-origin: left center;
+}
+
+#cien_trawy_pod_2 {
+    transform: skewY(-45deg);
+    transform-origin: left center;
+}
+
+
+
+
+
+
+
+
+
+/* Dynamiczne cienie podloga */
+
+/*
+?.ct1-1
+? ^^^^^
+? cien top 1 (warstwa) - 1 (numer bloku obsydianu)
+*/
+
+.cb {
+    position: absolute;
+    width: 400px;
+    height: 400px;
+
+    background-image: var(--grass_block_top);
+    background-size: 50px;
+    filter: brightness(var(--shad-brig));
+}
+
+.ct1-1 {
+    --pos-c: calc(var(--b1-pos-y) + 125px);
+    clip-path: polygon(
+        calc(175px + var(--b1-pos-x) + var(--pos-c)) calc(225px + var(--b1-pos-z) - var(--pos-c)), 
+        calc(175px + var(--b1-pos-x) + var(--pos-c)) calc(175px + var(--b1-pos-z) - var(--pos-c)), 
+        calc(225px + var(--b1-pos-x) + var(--pos-c)) calc(125px + var(--b1-pos-z) - var(--pos-c)), 
+        calc(275px + var(--b1-pos-x) + var(--pos-c)) calc(125px + var(--b1-pos-z) - var(--pos-c)), 
+        calc(275px + var(--b1-pos-x) + var(--pos-c)) calc(175px + var(--b1-pos-z) - var(--pos-c)), 
+        calc(225px + var(--b1-pos-x) + var(--pos-c)) calc(225px + var(--b1-pos-z) - var(--pos-c))
+    );
+}
+
+.ct1-2 {
+    --pos-c: calc(var(--b2-pos-y) + 125px);
+    clip-path: polygon(
+        calc(175px + var(--b2-pos-x) + var(--pos-c)) calc(225px + var(--b2-pos-z) - var(--pos-c)), 
+        calc(175px + var(--b2-pos-x) + var(--pos-c)) calc(175px + var(--b2-pos-z) - var(--pos-c)), 
+        calc(225px + var(--b2-pos-x) + var(--pos-c)) calc(125px + var(--b2-pos-z) - var(--pos-c)), 
+        calc(275px + var(--b2-pos-x) + var(--pos-c)) calc(125px + var(--b2-pos-z) - var(--pos-c)), 
+        calc(275px + var(--b2-pos-x) + var(--pos-c)) calc(175px + var(--b2-pos-z) - var(--pos-c)), 
+        calc(225px + var(--b2-pos-x) + var(--pos-c)) calc(225px + var(--b2-pos-z) - var(--pos-c))
+    );
+}
+
+.ct1-3 {
+    --pos-c: calc(var(--b3-pos-y) + 125px);
+    clip-path: polygon(
+        calc(175px + var(--b3-pos-x) + var(--pos-c)) calc(225px + var(--b3-pos-z) - var(--pos-c)), 
+        calc(175px + var(--b3-pos-x) + var(--pos-c)) calc(175px + var(--b3-pos-z) - var(--pos-c)), 
+        calc(225px + var(--b3-pos-x) + var(--pos-c)) calc(125px + var(--b3-pos-z) - var(--pos-c)), 
+        calc(275px + var(--b3-pos-x) + var(--pos-c)) calc(125px + var(--b3-pos-z) - var(--pos-c)), 
+        calc(275px + var(--b3-pos-x) + var(--pos-c)) calc(175px + var(--b3-pos-z) - var(--pos-c)), 
+        calc(225px + var(--b3-pos-x) + var(--pos-c)) calc(225px + var(--b3-pos-z) - var(--pos-c))
+    );
+}
+
+.ct1-4 {
+    --pos-c: calc(var(--b4-pos-y) + 125px);
+    clip-path: polygon(
+        calc(175px + var(--b4-pos-x) + var(--pos-c)) calc(225px + var(--b4-pos-z) - var(--pos-c)), 
+        calc(175px + var(--b4-pos-x) + var(--pos-c)) calc(175px + var(--b4-pos-z) - var(--pos-c)), 
+        calc(225px + var(--b4-pos-x) + var(--pos-c)) calc(125px + var(--b4-pos-z) - var(--pos-c)), 
+        calc(275px + var(--b4-pos-x) + var(--pos-c)) calc(125px + var(--b4-pos-z) - var(--pos-c)), 
+        calc(275px + var(--b4-pos-x) + var(--pos-c)) calc(175px + var(--b4-pos-z) - var(--pos-c)), 
+        calc(225px + var(--b4-pos-x) + var(--pos-c)) calc(225px + var(--b4-pos-z) - var(--pos-c))
+    );
+}
+
+.ct1-5 {
+    --pos-c: calc(var(--b5-pos-y) + 125px);
+    clip-path: polygon(
+        calc(175px + var(--b5-pos-x) + var(--pos-c)) calc(225px + var(--b5-pos-z) - var(--pos-c)), 
+        calc(175px + var(--b5-pos-x) + var(--pos-c)) calc(175px + var(--b5-pos-z) - var(--pos-c)), 
+        calc(225px + var(--b5-pos-x) + var(--pos-c)) calc(125px + var(--b5-pos-z) - var(--pos-c)), 
+        calc(275px + var(--b5-pos-x) + var(--pos-c)) calc(125px + var(--b5-pos-z) - var(--pos-c)), 
+        calc(275px + var(--b5-pos-x) + var(--pos-c)) calc(175px + var(--b5-pos-z) - var(--pos-c)), 
+        calc(225px + var(--b5-pos-x) + var(--pos-c)) calc(225px + var(--b5-pos-z) - var(--pos-c))
+    );
+}
+
+.ct1-6 {
+    --pos-c: calc(var(--b6-pos-y) + 125px);
+    clip-path: polygon(
+        calc(175px + var(--b6-pos-x) + var(--pos-c)) calc(225px + var(--b6-pos-z) - var(--pos-c)), 
+        calc(175px + var(--b6-pos-x) + var(--pos-c)) calc(175px + var(--b6-pos-z) - var(--pos-c)), 
+        calc(225px + var(--b6-pos-x) + var(--pos-c)) calc(125px + var(--b6-pos-z) - var(--pos-c)), 
+        calc(275px + var(--b6-pos-x) + var(--pos-c)) calc(125px + var(--b6-pos-z) - var(--pos-c)), 
+        calc(275px + var(--b6-pos-x) + var(--pos-c)) calc(175px + var(--b6-pos-z) - var(--pos-c)), 
+        calc(225px + var(--b6-pos-x) + var(--pos-c)) calc(225px + var(--b6-pos-z) - var(--pos-c))
+    );
+}
+
+.ct1-7 {
+    --pos-c: calc(var(--b7-pos-y) + 125px);
+    clip-path: polygon(
+        calc(175px + var(--b7-pos-x) + var(--pos-c)) calc(225px + var(--b7-pos-z) - var(--pos-c)), 
+        calc(175px + var(--b7-pos-x) + var(--pos-c)) calc(175px + var(--b7-pos-z) - var(--pos-c)), 
+        calc(225px + var(--b7-pos-x) + var(--pos-c)) calc(125px + var(--b7-pos-z) - var(--pos-c)), 
+        calc(275px + var(--b7-pos-x) + var(--pos-c)) calc(125px + var(--b7-pos-z) - var(--pos-c)), 
+        calc(275px + var(--b7-pos-x) + var(--pos-c)) calc(175px + var(--b7-pos-z) - var(--pos-c)), 
+        calc(225px + var(--b7-pos-x) + var(--pos-c)) calc(225px + var(--b7-pos-z) - var(--pos-c))
+    );
+}
+
+.ct1-8 {
+    --pos-c: calc(var(--b8-pos-y) + 125px);
+    clip-path: polygon(
+        calc(175px + var(--b8-pos-x) + var(--pos-c)) calc(225px + var(--b8-pos-z) - var(--pos-c)), 
+        calc(175px + var(--b8-pos-x) + var(--pos-c)) calc(175px + var(--b8-pos-z) - var(--pos-c)), 
+        calc(225px + var(--b8-pos-x) + var(--pos-c)) calc(125px + var(--b8-pos-z) - var(--pos-c)), 
+        calc(275px + var(--b8-pos-x) + var(--pos-c)) calc(125px + var(--b8-pos-z) - var(--pos-c)), 
+        calc(275px + var(--b8-pos-x) + var(--pos-c)) calc(175px + var(--b8-pos-z) - var(--pos-c)), 
+        calc(225px + var(--b8-pos-x) + var(--pos-c)) calc(225px + var(--b8-pos-z) - var(--pos-c))
+    );
+}
+
+.ct1-9 {
+    --pos-c: calc(var(--b9-pos-y) + 125px);
+    clip-path: polygon(
+        calc(175px + var(--b9-pos-x) + var(--pos-c)) calc(225px + var(--b9-pos-z) - var(--pos-c)), 
+        calc(175px + var(--b9-pos-x) + var(--pos-c)) calc(175px + var(--b9-pos-z) - var(--pos-c)), 
+        calc(225px + var(--b9-pos-x) + var(--pos-c)) calc(125px + var(--b9-pos-z) - var(--pos-c)), 
+        calc(275px + var(--b9-pos-x) + var(--pos-c)) calc(125px + var(--b9-pos-z) - var(--pos-c)), 
+        calc(275px + var(--b9-pos-x) + var(--pos-c)) calc(175px + var(--b9-pos-z) - var(--pos-c)), 
+        calc(225px + var(--b9-pos-x) + var(--pos-c)) calc(225px + var(--b9-pos-z) - var(--pos-c))
+    );
+}
+
+.ct1-10 {
+    --pos-c: calc(var(--b10-pos-y) + 125px);
+    clip-path: polygon(
+        calc(175px + var(--b10-pos-x) + var(--pos-c)) calc(225px + var(--b10-pos-z) - var(--pos-c)), 
+        calc(175px + var(--b10-pos-x) + var(--pos-c)) calc(175px + var(--b10-pos-z) - var(--pos-c)), 
+        calc(225px + var(--b10-pos-x) + var(--pos-c)) calc(125px + var(--b10-pos-z) - var(--pos-c)), 
+        calc(275px + var(--b10-pos-x) + var(--pos-c)) calc(125px + var(--b10-pos-z) - var(--pos-c)), 
+        calc(275px + var(--b10-pos-x) + var(--pos-c)) calc(175px + var(--b10-pos-z) - var(--pos-c)), 
+        calc(225px + var(--b10-pos-x) + var(--pos-c)) calc(225px + var(--b10-pos-z) - var(--pos-c))
+    );
+}
+
+.ct1-11 {
+    --pos-c: calc(var(--b11-pos-y) + 125px);
+    clip-path: polygon(
+        calc(175px + var(--b11-pos-x) + var(--pos-c)) calc(225px + var(--b11-pos-z) - var(--pos-c)), 
+        calc(175px + var(--b11-pos-x) + var(--pos-c)) calc(175px + var(--b11-pos-z) - var(--pos-c)), 
+        calc(225px + var(--b11-pos-x) + var(--pos-c)) calc(125px + var(--b11-pos-z) - var(--pos-c)), 
+        calc(275px + var(--b11-pos-x) + var(--pos-c)) calc(125px + var(--b11-pos-z) - var(--pos-c)), 
+        calc(275px + var(--b11-pos-x) + var(--pos-c)) calc(175px + var(--b11-pos-z) - var(--pos-c)), 
+        calc(225px + var(--b11-pos-x) + var(--pos-c)) calc(225px + var(--b11-pos-z) - var(--pos-c))
+    );
+}
+
+.ct1-12 {
+    --pos-c: calc(var(--b12-pos-y) + 125px);
+    clip-path: polygon(
+        calc(175px + var(--b12-pos-x) + var(--pos-c)) calc(225px + var(--b12-pos-z) - var(--pos-c)), 
+        calc(175px + var(--b12-pos-x) + var(--pos-c)) calc(175px + var(--b12-pos-z) - var(--pos-c)), 
+        calc(225px + var(--b12-pos-x) + var(--pos-c)) calc(125px + var(--b12-pos-z) - var(--pos-c)), 
+        calc(275px + var(--b12-pos-x) + var(--pos-c)) calc(125px + var(--b12-pos-z) - var(--pos-c)), 
+        calc(275px + var(--b12-pos-x) + var(--pos-c)) calc(175px + var(--b12-pos-z) - var(--pos-c)), 
+        calc(225px + var(--b12-pos-x) + var(--pos-c)) calc(225px + var(--b12-pos-z) - var(--pos-c))
+    );
+}
+
+.ct1-13 {
+    --pos-c: calc(var(--b13-pos-y) + 125px);
+    clip-path: polygon(
+        calc(175px + var(--b13-pos-x) + var(--pos-c)) calc(225px + var(--b13-pos-z) - var(--pos-c)), 
+        calc(175px + var(--b13-pos-x) + var(--pos-c)) calc(175px + var(--b13-pos-z) - var(--pos-c)), 
+        calc(225px + var(--b13-pos-x) + var(--pos-c)) calc(125px + var(--b13-pos-z) - var(--pos-c)), 
+        calc(275px + var(--b13-pos-x) + var(--pos-c)) calc(125px + var(--b13-pos-z) - var(--pos-c)), 
+        calc(275px + var(--b13-pos-x) + var(--pos-c)) calc(175px + var(--b13-pos-z) - var(--pos-c)), 
+        calc(225px + var(--b13-pos-x) + var(--pos-c)) calc(225px + var(--b13-pos-z) - var(--pos-c))
+    );
+}
+
+.ct1-14 {
+    --pos-c: calc(var(--b14-pos-y) + 125px);
+    clip-path: polygon(
+        calc(175px + var(--b14-pos-x) + var(--pos-c)) calc(225px + var(--b14-pos-z) - var(--pos-c)), 
+        calc(175px + var(--b14-pos-x) + var(--pos-c)) calc(175px + var(--b14-pos-z) - var(--pos-c)), 
+        calc(225px + var(--b14-pos-x) + var(--pos-c)) calc(125px + var(--b14-pos-z) - var(--pos-c)), 
+        calc(275px + var(--b14-pos-x) + var(--pos-c)) calc(125px + var(--b14-pos-z) - var(--pos-c)), 
+        calc(275px + var(--b14-pos-x) + var(--pos-c)) calc(175px + var(--b14-pos-z) - var(--pos-c)), 
+        calc(225px + var(--b14-pos-x) + var(--pos-c)) calc(225px + var(--b14-pos-z) - var(--pos-c))
+    );
+}
+
+/*  do kopiowania */
+.ct1-89 {
+    --pos-c: calc(var(--b89-pos-y) + 125px);
+    clip-path: polygon(
+        calc(175px + var(--b89-pos-x) + var(--pos-c)) calc(225px + var(--b89-pos-z) - var(--pos-c)), 
+        calc(175px + var(--b89-pos-x) + var(--pos-c)) calc(175px + var(--b89-pos-z) - var(--pos-c)), 
+        calc(225px + var(--b89-pos-x) + var(--pos-c)) calc(125px + var(--b89-pos-z) - var(--pos-c)), 
+        calc(275px + var(--b89-pos-x) + var(--pos-c)) calc(125px + var(--b89-pos-z) - var(--pos-c)), 
+        calc(275px + var(--b89-pos-x) + var(--pos-c)) calc(175px + var(--b89-pos-z) - var(--pos-c)), 
+        calc(225px + var(--b89-pos-x) + var(--pos-c)) calc(225px + var(--b89-pos-z) - var(--pos-c))
+    );
+}
+@keyframes cien_b {
+    0% {
+        clip-path: polygon(
+            calc(175px + var(--pos-x) + var(--pos-z)) calc(225px + var(--pos-y) - var(--pos-z)), 
+            calc(175px + var(--pos-x) + var(--pos-z)) calc(175px + var(--pos-y) - var(--pos-z)), 
+            calc(225px + var(--pos-x) + var(--pos-z)) calc(125px + var(--pos-y) - var(--pos-z)), 
+            calc(275px + var(--pos-x) + var(--pos-z)) calc(125px + var(--pos-y) - var(--pos-z)), 
+            calc(275px + var(--pos-x) + var(--pos-z)) calc(175px + var(--pos-y) - var(--pos-z)), 
+            calc(225px + var(--pos-x) + var(--pos-z)) calc(225px + var(--pos-y) - var(--pos-z))
+        );  
+        animation-timing-function: ease-in;
+    }
+    3% {
+        clip-path: polygon(
+            calc(225px + var(--pos-x) + var(--pos-z)) calc(175px + var(--pos-y) - var(--pos-z)), 
+            calc(225px + var(--pos-x) + var(--pos-z)) calc(175px + var(--pos-y) - var(--pos-z)), 
+            calc(225px + var(--pos-x) + var(--pos-z)) calc(175px + var(--pos-y) - var(--pos-z)), 
+            calc(225px + var(--pos-x) + var(--pos-z)) calc(175px + var(--pos-y) - var(--pos-z)), 
+            calc(225px + var(--pos-x) + var(--pos-z)) calc(175px + var(--pos-y) - var(--pos-z)), 
+            calc(225px + var(--pos-x) + var(--pos-z)) calc(175px + var(--pos-y) - var(--pos-z))
+        );    
+        animation-timing-function: ease-in;
+    }
+    20% {
+        clip-path: polygon(
+            calc(225px + var(--pos-x) + var(--pos-z) + var(--ani-hei)) calc(175px + var(--pos-y) - var(--pos-z) - var(--ani-hei)), 
+            calc(225px + var(--pos-x) + var(--pos-z) + var(--ani-hei)) calc(175px + var(--pos-y) - var(--pos-z) - var(--ani-hei)), 
+            calc(225px + var(--pos-x) + var(--pos-z) + var(--ani-hei)) calc(175px + var(--pos-y) - var(--pos-z) - var(--ani-hei)), 
+            calc(225px + var(--pos-x) + var(--pos-z) + var(--ani-hei)) calc(175px + var(--pos-y) - var(--pos-z) - var(--ani-hei)), 
+            calc(225px + var(--pos-x) + var(--pos-z) + var(--ani-hei)) calc(175px + var(--pos-y) - var(--pos-z) - var(--ani-hei)), 
+            calc(225px + var(--pos-x) + var(--pos-z) + var(--ani-hei)) calc(175px + var(--pos-y) - var(--pos-z) - var(--ani-hei))
+        );    
+    }
+    23% {
+        clip-path: polygon(
+            calc(175px + var(--pos-x) + var(--pos-z) + var(--ani-hei)) calc(225px + var(--pos-y) - var(--pos-z) - var(--ani-hei)), 
+            calc(175px + var(--pos-x) + var(--pos-z) + var(--ani-hei)) calc(175px + var(--pos-y) - var(--pos-z) - var(--ani-hei)), 
+            calc(225px + var(--pos-x) + var(--pos-z) + var(--ani-hei)) calc(125px + var(--pos-y) - var(--pos-z) - var(--ani-hei)), 
+            calc(275px + var(--pos-x) + var(--pos-z) + var(--ani-hei)) calc(125px + var(--pos-y) - var(--pos-z) - var(--ani-hei)), 
+            calc(275px + var(--pos-x) + var(--pos-z) + var(--ani-hei)) calc(175px + var(--pos-y) - var(--pos-z) - var(--ani-hei)), 
+            calc(225px + var(--pos-x) + var(--pos-z) + var(--ani-hei)) calc(225px + var(--pos-y) - var(--pos-z) - var(--ani-hei))
+        );  
+        animation-timing-function: ease-in;
+    }
+    30% {
+        clip-path: polygon(
+            calc(175px + var(--pos-x) + var(--pos-z)) calc(225px + var(--pos-y) - var(--pos-z)), 
+            calc(175px + var(--pos-x) + var(--pos-z)) calc(175px + var(--pos-y) - var(--pos-z)), 
+            calc(225px + var(--pos-x) + var(--pos-z)) calc(125px + var(--pos-y) - var(--pos-z)), 
+            calc(275px + var(--pos-x) + var(--pos-z)) calc(125px + var(--pos-y) - var(--pos-z)), 
+            calc(275px + var(--pos-x) + var(--pos-z)) calc(175px + var(--pos-y) - var(--pos-z)), 
+            calc(225px + var(--pos-x) + var(--pos-z)) calc(225px + var(--pos-y) - var(--pos-z))
+        );  
+        animation-timing-function: ease-in;
+    }
+    100% {
+        animation-timing-function: ease-in;
+    }
+}
+
+.cb, .ct2, .ct3 {
+    animation-iteration-count: infinite;
+    animation-duration: 15s;
+    animation-name: cien_b;
+}
+
+.ct1-1 {
+    --pos-x: var(--b1-pos-x);
+    --pos-y: var(--b1-pos-z);
+    --pos-z: calc(var(--b1-pos-y) + 125px);
+    
+    animation-delay: 0.25s;
+}
+
+.ct1-2 {
+    --pos-x: var(--b2-pos-x);
+    --pos-y: var(--b2-pos-z);
+    --pos-z: calc(var(--b2-pos-y) + 125px);
+    
+    animation-delay: 0.5s;
+}
+
+.ct1-3 {
+    --pos-x: var(--b3-pos-x);
+    --pos-y: var(--b3-pos-z);
+    --pos-z: calc(var(--b3-pos-y) + 125px);
+    
+    animation-delay: 0.75s;
+}
+
+.ct1-4 {
+    --pos-x: var(--b4-pos-x);
+    --pos-y: var(--b4-pos-z);
+    --pos-z: calc(var(--b4-pos-y) + 125px);
+    
+    animation-delay: 1s;
+}
+
+.ct1-5 {
+    --pos-x: var(--b5-pos-x);
+    --pos-y: var(--b5-pos-z);
+    --pos-z: calc(var(--b5-pos-y) + 125px);
+    
+    animation-delay: 1.25s;
+}
+
+.ct1-6 {
+    --pos-x: var(--b6-pos-x);
+    --pos-y: var(--b6-pos-z);
+    --pos-z: calc(var(--b6-pos-y) + 125px);
+    
+    animation-delay: 1.5s;
+}
+
+.ct1-7 {
+    --pos-x: var(--b7-pos-x);
+    --pos-y: var(--b7-pos-z);
+    --pos-z: calc(var(--b7-pos-y) + 125px);
+    
+    animation-delay: 1.75s;
+}
+
+.ct1-8 {
+    --pos-x: var(--b8-pos-x);
+    --pos-y: var(--b8-pos-z);
+    --pos-z: calc(var(--b8-pos-y) + 125px);
+    
+    animation-delay: 2s;
+}
+
+.ct1-9 {
+    --pos-x: var(--b9-pos-x);
+    --pos-y: var(--b9-pos-z);
+    --pos-z: calc(var(--b9-pos-y) + 125px);
+    
+    animation-delay: 2.25s;
+}
+
+.ct1-10 {
+    --pos-x: var(--b10-pos-x);
+    --pos-y: var(--b10-pos-z);
+    --pos-z: calc(var(--b10-pos-y) + 125px);
+    
+    animation-delay: 2.5s;
+}
+
+.ct1-11 {
+    --pos-x: var(--b11-pos-x);
+    --pos-y: var(--b11-pos-z);
+    --pos-z: calc(var(--b11-pos-y) + 125px);
+    
+    animation-delay: 2.75s;
+}
+
+.ct1-12 {
+    --pos-x: var(--b12-pos-x);
+    --pos-y: var(--b12-pos-z);
+    --pos-z: calc(var(--b12-pos-y) + 125px);
+    
+    animation-delay: 3s;
+}
+
+.ct1-13 {
+    --pos-x: var(--b13-pos-x);
+    --pos-y: var(--b13-pos-z);
+    --pos-z: calc(var(--b13-pos-y) + 125px);
+    
+    animation-delay: 3.25s;
+}
+
+.ct1-14 {
+    --pos-x: var(--b14-pos-x);
+    --pos-y: var(--b14-pos-z);
+    --pos-z: calc(var(--b14-pos-y) + 125px);
+    
+    animation-delay: 3.5s;
+}
+
+
+
+
+
+
+.p_shad {
+    width: 50px;
+    height: 50px;
+    transform: skewX(-45deg);
+    filter: grayscale(100%);
+    background-image: var(--portal);
+    background-size: 50px;
+    opacity: calc(100% - var(--shad-brig));
+}
+
+@keyframes cien_l {
+    0% {
+        clip-path: polygon(
+            calc(175px + var(--pos-x)) calc(325px + var(--pos-y) - var(--pos-z)), 
+            calc(175px + var(--pos-x)) calc(225px + var(--pos-y) - var(--pos-z)), 
+            calc(225px + var(--pos-x)) calc(225px + var(--pos-y) - var(--pos-z)), 
+            calc(225px + var(--pos-x)) calc(325px + var(--pos-y) - var(--pos-z))
+        );  
+        animation-timing-function: ease-in;
+    }
+    3% {
+        clip-path: polygon(
+            calc(175px + var(--pos-x)) calc(275px + var(--pos-y) - var(--pos-z)), 
+            calc(175px + var(--pos-x)) calc(275px + var(--pos-y) - var(--pos-z)), 
+            calc(175px + var(--pos-x)) calc(275px + var(--pos-y) - var(--pos-z)), 
+            calc(175px + var(--pos-x)) calc(275px + var(--pos-y) - var(--pos-z))
+        );   
+        animation-timing-function: ease-in;
+    }
+    20% {
+       clip-path: polygon(
+            calc(175px + var(--pos-x)) calc(275px + var(--pos-y) - var(--pos-z) - var(--ani-hei)), 
+            calc(175px + var(--pos-x)) calc(275px + var(--pos-y) - var(--pos-z) - var(--ani-hei)), 
+            calc(175px + var(--pos-x)) calc(275px + var(--pos-y) - var(--pos-z) - var(--ani-hei)), 
+            calc(175px + var(--pos-x)) calc(275px + var(--pos-y) - var(--pos-z) - var(--ani-hei))
+        );  
+    }
+    23% {
+        clip-path: polygon(
+            calc(175px + var(--pos-x)) calc(325px + var(--pos-y) - var(--pos-z) - var(--ani-hei)), 
+            calc(175px + var(--pos-x)) calc(225px + var(--pos-y) - var(--pos-z) - var(--ani-hei)), 
+            calc(225px + var(--pos-x)) calc(225px + var(--pos-y) - var(--pos-z) - var(--ani-hei)), 
+            calc(225px + var(--pos-x)) calc(325px + var(--pos-y) - var(--pos-z) - var(--ani-hei))
+        );   
+        animation-timing-function: ease-in;
+    }
+    30% {
+        clip-path: polygon(
+            calc(175px + var(--pos-x)) calc(325px + var(--pos-y) - var(--pos-z)), 
+            calc(175px + var(--pos-x)) calc(225px + var(--pos-y) - var(--pos-z)), 
+            calc(225px + var(--pos-x)) calc(225px + var(--pos-y) - var(--pos-z)), 
+            calc(225px + var(--pos-x)) calc(325px + var(--pos-y) - var(--pos-z))
+        );  
+        animation-timing-function: ease-in;
+    }
+    100% {
+        animation-timing-function: ease-in;
+    }
+}
+
+.cl1, .cl2, .cl3 {
+    animation-iteration-count: infinite;
+    animation-duration: 15s;
+    animation-name: cien_l;
+}
+
+.cl1-1 {
+    --pos-x: var(--b1-pos-x);
+    --pos-y: var(--b1-pos-z);
+    --pos-z: calc(var(--b1-pos-y) + 125px);
+    
+    animation-delay: 0.25s;
+}
+
+.cl1-2 {
+    --pos-x: var(--b2-pos-x);
+    --pos-y: var(--b2-pos-z);
+    --pos-z: calc(var(--b2-pos-y) + 125px);
+    
+    animation-delay: 0.5s;
+}
+
+.cl1-3 {
+    --pos-x: var(--b3-pos-x);
+    --pos-y: var(--b3-pos-z);
+    --pos-z: calc(var(--b3-pos-y) + 125px);
+    
+    animation-delay: 0.75s;
+}
+
+.cl1-4 {
+    --pos-x: var(--b4-pos-x);
+    --pos-y: var(--b4-pos-z);
+    --pos-z: calc(var(--b4-pos-y) + 125px);
+    
+    animation-delay: 1s;
+}
+
+.cl1-5 {
+    --pos-x: var(--b5-pos-x);
+    --pos-y: var(--b5-pos-z);
+    --pos-z: calc(var(--b5-pos-y) + 125px);
+    
+    animation-delay: 1.25s;
+}
+
+.cl1-6 {
+    --pos-x: var(--b6-pos-x);
+    --pos-y: var(--b6-pos-z);
+    --pos-z: calc(var(--b6-pos-y) + 125px);
+    
+    animation-delay: 1.5s;
+}
+
+.cl1-7 {
+    --pos-x: var(--b7-pos-x);
+    --pos-y: var(--b7-pos-z);
+    --pos-z: calc(var(--b7-pos-y) + 125px);
+    
+    animation-delay: 1.75s;
+}
+
+.cl1-8 {
+    --pos-x: var(--b8-pos-x);
+    --pos-y: var(--b8-pos-z);
+    --pos-z: calc(var(--b8-pos-y) + 125px);
+    
+    animation-delay: 2s;
+}
+
+.cl1-9 {
+    --pos-x: var(--b9-pos-x);
+    --pos-y: var(--b9-pos-z);
+    --pos-z: calc(var(--b9-pos-y) + 125px);
+    
+    animation-delay: 2.25s;
+}
+
+.cl1-10 {
+    --pos-x: var(--b10-pos-x);
+    --pos-y: var(--b10-pos-z);
+    --pos-z: calc(var(--b10-pos-y) + 125px);
+    
+    animation-delay: 2.5s;
+}
+
+.cl1-11 {
+    --pos-x: var(--b11-pos-x);
+    --pos-y: var(--b11-pos-z);
+    --pos-z: calc(var(--b11-pos-y) + 125px);
+    
+    animation-delay: 2.75s;
+}
+
+.cl1-12 {
+    --pos-x: var(--b12-pos-x);
+    --pos-y: var(--b12-pos-z);
+    --pos-z: calc(var(--b12-pos-y) + 125px);
+    
+    animation-delay: 3s;
+}
+
+.cl1-13 {
+    --pos-x: var(--b13-pos-x);
+    --pos-y: var(--b13-pos-z);
+    --pos-z: calc(var(--b13-pos-y) + 125px);
+    
+    animation-delay: 3.25s;
+}
+
+.cl1-14 {
+    --pos-x: var(--b14-pos-x);
+    --pos-y: var(--b14-pos-z);
+    --pos-z: calc(var(--b14-pos-y) + 125px);
+    
+    animation-delay: 3.5s;
+}
+.ct {
+    position: absolute;
+    width: 51px;
+    height: 51px;
+
+    background-image: var(--grass_block_top);
+    background-size: 50px;
+    filter: brightness(var(--shad-brig));
+}
+.cl {
+    position: absolute;
+    width: 51px;
+    height: 51px;
+
+    background-image: var(--grass_block_side);
+    background-size: 50px;
+    filter: brightness(var(--shad-brig));
+}
+
+.cien {
+    position: absolute;
+}
+
+
+.ct2-01 {
+    top: -50px;
+    left: 150px;
+    width: 201px;
+}
+.ct2-02 {
+    top: 0px;
+    left: 350px;
+}
+.ct2-03 {
+    top: 50px;
+    left: 400px;
+}
+.ct2 {
+    width: 600px;
+    height: 600px;
+    transform: 
+        rotateX(80deg)
+        rotateZ(45deg)
+        translate3d(50px, 150px, -99.5px);
+}
+
+.ct3 {
+    width: 600px;
+    height: 600px;
+    transform: 
+        rotateX(80deg)
+        rotateZ(45deg)
+        translate3d(0px, 200px, -49.5px);
+}
+
+.ct3-01 {
+    top: -100px;
+    left: 400px;
+}
+.ct3-02 {
+    top: -100px;
+    left: 450px;
+}
+.ct3-03 {
+    top: -50px;
+    left: 450px;
+}
+
+
+
+.cl1 {
+    width: 400px;
+    height: 400px;
+    transform: 
+        rotateX(-10deg)
+        rotateY(-45deg)
+        translate3d(150px, 150px, -149.5px);
+}
+.cl1-01 {
+    top: 150px;
+    left: 0px;
+    width: 151px;
+}
+.cl1-02 {
+    top: 100px;
+    left: 150px;
+}
+
+
+.cl2 {
+    width: 400px;
+    height: 400px;
+    transform: 
+        rotateX(-10deg)
+        rotateY(-45deg)
+        translate3d(150px, 150px, -99.5px);
+}
+.cl2-01 {
+    top: 100px;
+    left: 200px;
+}
+.cl2-02 {
+    top: 150px;
+    left: 150px;
+}
+
+
+
+.cl3 {
+    width: 400px;
+    height: 400px;
+    transform: 
+        rotateX(-10deg)
+        rotateY(-45deg)
+        translate3d(100px, 100px, -49.5px);
+}
+.cl3-01 {
+    top: 200px;
+    left: 250px;
+}
+
+.cl1-1 {
+    --pos-c: calc(var(--b1-pos-y) + 125px);
+    clip-path: polygon(
+        calc(175px + var(--b1-pos-x)) calc(325px + var(--b1-pos-z) - var(--pos-c)), 
+        calc(175px + var(--b1-pos-x)) calc(225px + var(--b1-pos-z) - var(--pos-c)), 
+        calc(225px + var(--b1-pos-x)) calc(225px + var(--b1-pos-z) - var(--pos-c)), 
+        calc(225px + var(--b1-pos-x)) calc(325px + var(--b1-pos-z) - var(--pos-c))
+    );
+}
+.cl1-2 {
+    --pos-c: calc(var(--b2-pos-y) + 125px);
+    clip-path: polygon(
+        calc(175px + var(--b2-pos-x)) calc(325px + var(--b2-pos-z) - var(--pos-c)), 
+        calc(175px + var(--b2-pos-x)) calc(225px + var(--b2-pos-z) - var(--pos-c)), 
+        calc(225px + var(--b2-pos-x)) calc(225px + var(--b2-pos-z) - var(--pos-c)), 
+        calc(225px + var(--b2-pos-x)) calc(325px + var(--b2-pos-z) - var(--pos-c))
+    );
+}
+.cl1-3 {
+    --pos-c: calc(var(--b3-pos-y) + 125px);
+    clip-path: polygon(
+        calc(175px + var(--b3-pos-x)) calc(325px + var(--b3-pos-z) - var(--pos-c)), 
+        calc(175px + var(--b3-pos-x)) calc(225px + var(--b3-pos-z) - var(--pos-c)), 
+        calc(225px + var(--b3-pos-x)) calc(225px + var(--b3-pos-z) - var(--pos-c)), 
+        calc(225px + var(--b3-pos-x)) calc(325px + var(--b3-pos-z) - var(--pos-c))
+    );
+}
+.cl1-4 {
+    --pos-c: calc(var(--b4-pos-y) + 125px);
+    clip-path: polygon(
+        calc(175px + var(--b4-pos-x)) calc(325px + var(--b4-pos-z) - var(--pos-c)), 
+        calc(175px + var(--b4-pos-x)) calc(225px + var(--b4-pos-z) - var(--pos-c)), 
+        calc(225px + var(--b4-pos-x)) calc(225px + var(--b4-pos-z) - var(--pos-c)), 
+        calc(225px + var(--b4-pos-x)) calc(325px + var(--b4-pos-z) - var(--pos-c))
+    );
+}
+.cl1-5 {
+    --pos-c: calc(var(--b5-pos-y) + 125px);
+    clip-path: polygon(
+        calc(175px + var(--b5-pos-x)) calc(325px + var(--b5-pos-z) - var(--pos-c)), 
+        calc(175px + var(--b5-pos-x)) calc(225px + var(--b5-pos-z) - var(--pos-c)), 
+        calc(225px + var(--b5-pos-x)) calc(225px + var(--b5-pos-z) - var(--pos-c)), 
+        calc(225px + var(--b5-pos-x)) calc(325px + var(--b5-pos-z) - var(--pos-c))
+    );
+}
+.cl1-6 {
+    --pos-c: calc(var(--b6-pos-y) + 125px);
+    clip-path: polygon(
+        calc(175px + var(--b6-pos-x)) calc(325px + var(--b6-pos-z) - var(--pos-c)), 
+        calc(175px + var(--b6-pos-x)) calc(225px + var(--b6-pos-z) - var(--pos-c)), 
+        calc(225px + var(--b6-pos-x)) calc(225px + var(--b6-pos-z) - var(--pos-c)), 
+        calc(225px + var(--b6-pos-x)) calc(325px + var(--b6-pos-z) - var(--pos-c))
+    );
+}
+.cl1-7 {
+    --pos-c: calc(var(--b7-pos-y) + 125px);
+    clip-path: polygon(
+        calc(175px + var(--b7-pos-x)) calc(325px + var(--b7-pos-z) - var(--pos-c)), 
+        calc(175px + var(--b7-pos-x)) calc(225px + var(--b7-pos-z) - var(--pos-c)), 
+        calc(225px + var(--b7-pos-x)) calc(225px + var(--b7-pos-z) - var(--pos-c)), 
+        calc(225px + var(--b7-pos-x)) calc(325px + var(--b7-pos-z) - var(--pos-c))
+    );
+}
+.cl1-8 {
+    --pos-c: calc(var(--b8-pos-y) + 125px);
+    clip-path: polygon(
+        calc(175px + var(--b8-pos-x)) calc(325px + var(--b8-pos-z) - var(--pos-c)), 
+        calc(175px + var(--b8-pos-x)) calc(225px + var(--b8-pos-z) - var(--pos-c)), 
+        calc(225px + var(--b8-pos-x)) calc(225px + var(--b8-pos-z) - var(--pos-c)), 
+        calc(225px + var(--b8-pos-x)) calc(325px + var(--b8-pos-z) - var(--pos-c))
+    );
+}
+.cl1-9 {
+    --pos-c: calc(var(--b9-pos-y) + 125px);
+    clip-path: polygon(
+        calc(175px + var(--b9-pos-x)) calc(325px + var(--b9-pos-z) - var(--pos-c)), 
+        calc(175px + var(--b9-pos-x)) calc(225px + var(--b9-pos-z) - var(--pos-c)), 
+        calc(225px + var(--b9-pos-x)) calc(225px + var(--b9-pos-z) - var(--pos-c)), 
+        calc(225px + var(--b9-pos-x)) calc(325px + var(--b9-pos-z) - var(--pos-c))
+    );
+}
+.cl1-10 {
+    --pos-c: calc(var(--b10-pos-y) + 125px);
+    clip-path: polygon(
+        calc(175px + var(--b10-pos-x)) calc(325px + var(--b10-pos-z) - var(--pos-c)), 
+        calc(175px + var(--b10-pos-x)) calc(225px + var(--b10-pos-z) - var(--pos-c)), 
+        calc(225px + var(--b10-pos-x)) calc(225px + var(--b10-pos-z) - var(--pos-c)), 
+        calc(225px + var(--b10-pos-x)) calc(325px + var(--b10-pos-z) - var(--pos-c))
+    );
+}
+.cl1-11 {
+    --pos-c: calc(var(--b11-pos-y) + 125px);
+    clip-path: polygon(
+        calc(175px + var(--b11-pos-x)) calc(325px + var(--b11-pos-z) - var(--pos-c)), 
+        calc(175px + var(--b11-pos-x)) calc(225px + var(--b11-pos-z) - var(--pos-c)), 
+        calc(225px + var(--b11-pos-x)) calc(225px + var(--b11-pos-z) - var(--pos-c)), 
+        calc(225px + var(--b11-pos-x)) calc(325px + var(--b11-pos-z) - var(--pos-c))
+    );
+}
+.cl1-12 {
+    --pos-c: calc(var(--b12-pos-y) + 125px);
+    clip-path: polygon(
+        calc(175px + var(--b12-pos-x)) calc(325px + var(--b12-pos-z) - var(--pos-c)), 
+        calc(175px + var(--b12-pos-x)) calc(225px + var(--b12-pos-z) - var(--pos-c)), 
+        calc(225px + var(--b12-pos-x)) calc(225px + var(--b12-pos-z) - var(--pos-c)), 
+        calc(225px + var(--b12-pos-x)) calc(325px + var(--b12-pos-z) - var(--pos-c))
+    );
+}
+.cl1-13 {
+    --pos-c: calc(var(--b13-pos-y) + 125px);
+    clip-path: polygon(
+        calc(175px + var(--b13-pos-x)) calc(325px + var(--b13-pos-z) - var(--pos-c)), 
+        calc(175px + var(--b13-pos-x)) calc(225px + var(--b13-pos-z) - var(--pos-c)), 
+        calc(225px + var(--b13-pos-x)) calc(225px + var(--b13-pos-z) - var(--pos-c)), 
+        calc(225px + var(--b13-pos-x)) calc(325px + var(--b13-pos-z) - var(--pos-c))
+    );
+}
+.cl1-14 {
+    --pos-c: calc(var(--b14-pos-y) + 125px);
+    clip-path: polygon(
+        calc(175px + var(--b14-pos-x)) calc(325px + var(--b14-pos-z) - var(--pos-c)), 
+        calc(175px + var(--b14-pos-x)) calc(225px + var(--b14-pos-z) - var(--pos-c)), 
+        calc(225px + var(--b14-pos-x)) calc(225px + var(--b14-pos-z) - var(--pos-c)), 
+        calc(225px + var(--b14-pos-x)) calc(325px + var(--b14-pos-z) - var(--pos-c))
+    );
+}
+
+            body, #tlo {
+                position: absolute;
+                top: 0px;
+                left: 0px;
+                right: 0px;
+                bottom: 0px;
+                margin: 0px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+            }
+            #tlo {
+                width: 100%;
+                height: 100%;
+                background: linear-gradient(lightblue 65%, darkblue );
+                overflow: hidden;
+            }
+            #scena {
+                height: 90%;
+                width: 90%;
+
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                /* border: solid 1px black; */
+                margin: 0px;
+
+                perspective: 1000px;
+                transform-style: preserve-3d;
+
+                /* Bracanie kamery */
+                transition: perspective-origin 0.5s;
+                perspective-origin: var(--kam-x) var(--kam-y);
+            }
+
+            .obj { /* Objekt */
+                position: absolute;
+                background-color: grey;
+            }
+            
+            
+
+            #podloga {
+                width: 401px;
+                height: 401px;
+
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                background-image: var(--grass_block_top);
+                background-size: 50px;
+
+                transform: 
+                    rotateX(80deg)
+                    rotateZ(45deg)
+                    translate3d(0px, 0px, -150px)
+                ;
+
+                overflow: hidden;
+            }
+
+
+            .kostka {
+                width: 51px;
+                height: 51px;
+            }
+            .kostkadol {
+                width: 401px;
+                height: 51px;
+            }   
+
+            input {
+                z-index: 100;
+            }
+            #shadows_debug {
+                position: fixed;
+                left: 5px;
+                top: 5px;
+            }
+            #shadows_debug::after {
+                margin-left: 15px;
+                content: "Shadows debug";
+            }
+            #shadows_debug:checked ~ * > * > .cien {
+                background-color: grey;
+            }
+
+            #scroll_overflow {
+                position: fixed;
+                left: 5px;
+                top: 40px;
+            }
+            #scroll_overflow::after {
+                margin-left: 15px;
+                content: "Scroll overflow";
+            }
+            #scroll_overflow:checked ~ #tlo {
+                overflow: scroll;
+            }
+        </style>
+
+    </head>
+    <body id="body">
+        <input type="checkbox" id="shadows_debug" title="Debug shadows">
+        <input type="checkbox" id="scroll_overflow" title="Scroll overflow">
+        <div id="tlo">
+
+            <div class="camel" id="kam1"></div>
+            <div class="camel" id="kam2"></div>
+            <div class="camel" id="kam3"></div>
+            <div class="camel" id="kam4"></div>
+            <div class="camel" id="kam5"></div>
+
+            <div class="camel" id="kam6"></div>
+            <div class="camel" id="kam7"></div>
+            <div class="camel" id="kam8"></div>
+            <div class="camel" id="kam9"></div>
+            <div class="camel" id="kam10"></div>
+
+            <div class="camel" id="kam11"></div>
+            <div class="camel" id="kam12"></div>
+            <div class="camel" id="kam13"></div>
+            <div class="camel" id="kam14"></div>
+            <div class="camel" id="kam15"></div>
+
+            <div class="camel" id="kam16"></div>
+            <div class="camel" id="kam17"></div>
+            <div class="camel" id="kam18"></div>
+            <div class="camel" id="kam19"></div>
+            <div class="camel" id="kam20"></div>
+
+            <div class="camel" id="kam21"></div>
+            <div class="camel" id="kam22"></div>
+            <div class="camel" id="kam23"></div>
+            <div class="camel" id="kam24"></div>
+            <div class="camel" id="kam25"></div>
+
+            <div id="scena">
+                <!--    Podłoga      -->
+                <div class="obj" id="podloga">
+                    <div id="cien_trawy_podloga"></div>
+
+                    <!-- Dynamiczne cienie podloga --> <!-- bul bul -->
+                    <div class="cien cb ct1-1"></div>
+                    <div class="cien cb ct1-2"></div>
+                    <div class="cien cb ct1-3"></div>
+                    <div class="cien cb ct1-4"></div>
+                    <div class="cien cb ct1-5"></div>
+                    <div class="cien cb ct1-6"></div>
+                    <div class="cien cb ct1-7"></div>
+                    <div class="cien cb ct1-8"></div>
+                    <div class="cien cb ct1-9"></div>
+                    <div class="cien cb ct1-10"></div>
+                    <div class="cien cb ct1-11"></div>
+                    <div class="cien cb ct1-12"></div>
+                    <div class="cien cb ct1-13"></div>
+                    <div class="cien cb ct1-14"></div>
+
+                </div>
+
+                <!--    Prawa strona bloków trawy      -->
+                <div class="obj kostka br" id="br1">
+                    <div class="obj kostka br" style="top: -50px;"></div>
+                    <div class="obj kostka br" style="left: -50px;"></div>
+                    <div class="obj kostka br" style="left: -100px;"></div>
+                    <div class="obj kostka br" style="top: -50px; left: -50px;"></div>
+                </div>
+                <div class="obj kostka br" id="br6"></div>
+                <div class="obj kostka br" id="br7">
+                    <div class="obj kostka bl" style="left: 100px; top: -50px;"></div>
+                </div>
+                <div class="obj kostka br" id="br8">
+                    <div class="obj kostka bl" style="left: 100px; top: -50px;"></div>
+                </div>
+
+                <div class="obj kostkadol br" id="br0">
+
+                </div>
+
+                <!--    Lewa strona bloków trawy      -->
+                <div class="obj kostka bl" id="bl1">
+                    <div class="obj kostka bl" style="top: 50px; left: -50px;"></div>
+                    <div class="obj kostka bl" style="top: 50px; left: -100px;"></div>
+                    <div class="obj kostka bl" style="top: 50px; left: -150px; overflow:hidden;">
+                        <div class="kostka cien_trawy"></div>
+                    </div>
+                    <div class="obj kostka bl" style="left: -250px; overflow:hidden;">
+                        <div class="kostka cien_trawy"></div>
+                    </div>
+                </div>
+                <div class="obj kostka bl" id="bl2">
+                    <div class="obj kostka bl" style="left: -50px; top: 50px;"></div>
+                    <div class="obj kostka bl" style="left: -250px; top: 50px; overflow:hidden;">
+                        <div class="kostka cien_trawy"></div>
+                    </div>
+                    <div class="obj kostka bl" style="left: -350px;"></div>
+                </div>
+                <div class="obj kostka bl" id="bl3">
+                    <div class="obj kostka bl" style="left: -300px; overflow:hidden;">
+                        <div class="kostka cien_trawy"></div>
+                    </div>
+                </div>
+                <div class="obj kostka bl" id="bl4"></div>
+
+                <div class="obj kostkadol bl" id="bl0">
+                    
+                </div>
+                <!-- Cienie lewa strona -->
+                <div class="cien cl1 cl1-1">
+                    <div class="cl cl1-01"></div>
+                    <div class="cl cl1-02"></div>
+                </div>
+                <div class="cien cl1 cl1-2">
+                    <div class="cl cl1-01"></div>
+                    <div class="cl cl1-02"></div>
+                </div>
+                <div class="cien cl1 cl1-5">
+                    <div class="cl cl1-01"></div>
+                    <div class="cl cl1-02"></div>
+                </div>
+                <div class="cien cl1 cl1-7">
+                    <div class="cl cl1-01"></div>
+                    <div class="cl cl1-02"></div>
+                </div>
+                <div class="cien cl1 cl1-9">
+                    <div class="cl cl1-01"></div>
+                    <div class="cl cl1-02"></div>
+                </div>
+                <div class="cien cl1 cl1-11">
+                    <div class="cl cl1-01"></div>
+                    <div class="cl cl1-02"></div>
+                </div>
+                <div class="cien cl1 cl1-12">
+                    <div class="cl cl1-01"></div>
+                    <div class="cl cl1-02"></div>
+                </div>
+                <!-- 2 warstwa lewa-->
+                <div class="cien cl2 cl1-2">
+                    <div class="cl cl2-01"></div>
+                    <div class="cl cl2-02"></div>
+                </div>
+                <div class="cien cl2 cl1-3">
+                    <div class="cl cl2-01"></div>
+                    <div class="cl cl2-02"></div>
+                </div>
+                <div class="cien cl2 cl1-4">
+                    <div class="cl cl2-01"></div>
+                    <div class="cl cl2-02"></div>
+                </div>
+                <div class="cien cl2 cl1-6">
+                    <div class="cl cl2-01"></div>
+                    <div class="cl cl2-02"></div>
+                </div>
+                <div class="cien cl2 cl1-8">
+                    <div class="cl cl2-01"></div>
+                    <div class="cl cl2-02"></div>
+                </div>
+                <div class="cien cl2 cl1-10">
+                    <div class="cl cl2-01"></div>
+                    <div class="cl cl2-02"></div>
+                </div>
+                <div class="cien cl2 cl1-12">
+                    <div class="cl cl2-01"></div>
+                    <div class="cl cl2-02"></div>
+                </div>
+                <div class="cien cl2 cl1-13">
+                    <div class="cl cl2-01"></div>
+                    <div class="cl cl2-02"></div>
+                </div>
+                <div class="cien cl2 cl1-14">
+                    <div class="cl cl2-01"></div>
+                    <div class="cl cl2-02"></div>
+                </div>
+                <!-- 3 warstwa lewa-->
+                <div class="cien cl3 cl1-4">
+                    <div class="cl cl3-01"></div>
+                </div>
+                <div class="cien cl3 cl1-6">
+                    <div class="cl cl3-01"></div>
+                </div>
+                <div class="cien cl3 cl1-8">
+                    <div class="cl cl3-01"></div>
+                </div>
+                <div class="cien cl3 cl1-10">
+                    <div class="cl cl3-01"></div>
+                </div>
+                <div class="cien cl3 cl1-14">
+                    <div class="cl cl3-01"></div>
+                </div>
+
+                <!--    Góra bloków trawy      -->
+                <div class="obj kostka bt" id="bt1">
+                    <div class="obj kostka bt" style="top: -50px; left: -50px;">
+                    </div>
+                    <div class="obj kostka bt" style="top: -100px; left: -100px;"></div>
+                    <div class="obj kostka bt" style="top: -100px; left: -150px;"></div>
+                    <div class="obj kostka bt" style="top: -100px; left: -200px;"></div>
+                    <div class="obj kostka bt" style="top: -50px; left: -250px;"></div>
+                    <div class="obj kostka bt" style="top: -100px; left: -250px;"></div>
+                    <div class="obj kostka bt" style="top: -50px; left: -300px;">
+                        <div class="kostka" id="cien_trawy_pod_2"></div>
+                    </div>
+                    <div class="obj kostka bt" style="left: -300px;"></div>
+                    <div class="obj kostka bt" style="left: -350px;"></div>
+                    <div class="obj kostka bt" style="top: 50px; left: -350px;"></div>
+                </div>
+                <div class="obj kostka bt" id="bt2">
+                    <div class="obj kostka bt" style="top: 50px;"></div>
+                    <div class="obj kostka bt" style="left: -50px;"></div>
+
+                    <div class="obj kostka bt" style="left: -300px;"></div>
+                    <div class="obj kostka bt" style="left: -350px;"></div>
+                    <div class="obj kostka bt" style="top: 50px; left: -350px;"></div>
+                </div>
+
+                <!-- cienie top -->
+                <div class="cien ct2 ct1-1">
+                    <div class="ct ct2-01"></div>
+                    <div class="ct ct2-02"></div>
+                    <div class="ct ct2-03"></div>
+                </div>
+                <div class="cien ct2 ct1-2">
+                    <div class="ct ct2-01"></div>
+                    <div class="ct ct2-02"></div>
+                    <div class="ct ct2-03"></div>
+                </div>
+                <div class="cien ct2 ct1-3">
+                    <div class="ct ct2-01"></div>
+                    <div class="ct ct2-02"></div>
+                    <div class="ct ct2-03"></div>
+                </div>
+                <div class="cien ct2 ct1-4">
+                    <div class="ct ct2-01"></div>
+                    <div class="ct ct2-02"></div>
+                    <div class="ct ct2-03"></div>
+                </div>
+                <div class="cien ct2 ct1-5">
+                    <div class="ct ct2-01"></div>
+                    <div class="ct ct2-02"></div>
+                    <div class="ct ct2-03"></div>
+                </div>
+                <div class="cien ct2 ct1-6">
+                    <div class="ct ct2-01"></div>
+                    <div class="ct ct2-02"></div>
+                    <div class="ct ct2-03"></div>
+                </div>
+                <div class="cien ct2 ct1-7">
+                    <div class="ct ct2-01"></div>
+                    <div class="ct ct2-02"></div>
+                    <div class="ct ct2-03"></div>
+                </div>
+                <div class="cien ct2 ct1-8">
+                    <div class="ct ct2-01"></div>
+                    <div class="ct ct2-02"></div>
+                    <div class="ct ct2-03"></div>
+                </div>
+                <div class="cien ct2 ct1-9">
+                    <div class="ct ct2-01"></div>
+                    <div class="ct ct2-02"></div>
+                    <div class="ct ct2-03"></div>
+                </div>
+                <div class="cien ct2 ct1-10">
+                    <div class="ct ct2-01"></div>
+                    <div class="ct ct2-02"></div>
+                    <div class="ct ct2-03"></div>
+                </div>
+                <div class="cien ct2 ct1-11">
+                    <div class="ct ct2-01"></div>
+                    <div class="ct ct2-02"></div>
+                    <div class="ct ct2-03"></div>
+                </div>
+                <div class="cien ct2 ct1-12">
+                    <div class="ct ct2-01"></div>
+                    <div class="ct ct2-02"></div>
+                    <div class="ct ct2-03"></div>
+                </div>
+                <div class="cien ct2 ct1-13">
+                    <div class="ct ct2-01"></div>
+                    <div class="ct ct2-02"></div>
+                    <div class="ct ct2-03"></div>
+                </div>
+                <div class="cien ct2 ct1-14">
+                    <div class="ct ct2-01"></div>
+                    <div class="ct ct2-02"></div>
+                    <div class="ct ct2-03"></div>
+                </div>
+                <!-- drugie pienrto cieni-->
+                <div class="cien ct3 ct1-1">
+                    <div class="ct ct3-01"></div>
+                    <div class="ct ct3-02"></div>
+                    <div class="ct ct3-03"></div>
+                </div>
+                <div class="cien ct3 ct1-2">
+                    <div class="ct ct3-01"></div>
+                    <div class="ct ct3-02"></div>
+                    <div class="ct ct3-03"></div>
+                </div>
+                <div class="cien ct3 ct1-3">
+                    <div class="ct ct3-01"></div>
+                    <div class="ct ct3-02"></div>
+                    <div class="ct ct3-03"></div>
+                </div>
+                <div class="cien ct3 ct1-4">
+                    <div class="ct ct3-01"></div>
+                    <div class="ct ct3-02"></div>
+                    <div class="ct ct3-03"></div>
+                </div>
+                <div class="cien ct3 ct1-5">
+                    <div class="ct ct3-01"></div>
+                    <div class="ct ct3-02"></div>
+                    <div class="ct ct3-03"></div>
+                </div>
+                <div class="cien ct3 ct1-6">
+                    <div class="ct ct3-01"></div>
+                    <div class="ct ct3-02"></div>
+                    <div class="ct ct3-03"></div>
+                </div>
+                <div class="cien ct3 ct1-7">
+                    <div class="ct ct3-01"></div>
+                    <div class="ct ct3-02"></div>
+                    <div class="ct ct3-03"></div>
+                </div>
+                <div class="cien ct3 ct1-8">
+                    <div class="ct ct3-01"></div>
+                    <div class="ct ct3-02"></div>
+                    <div class="ct ct3-03"></div>
+                </div>
+                <div class="cien ct3 ct1-9">
+                    <div class="ct ct3-01"></div>
+                    <div class="ct ct3-02"></div>
+                    <div class="ct ct3-03"></div>
+                </div>
+                <div class="cien ct3 ct1-10">
+                    <div class="ct ct3-01"></div>
+                    <div class="ct ct3-02"></div>
+                    <div class="ct ct3-03"></div>
+                </div>
+                <div class="cien ct3 ct1-11">
+                    <div class="ct ct3-01"></div>
+                    <div class="ct ct3-02"></div>
+                    <div class="ct ct3-03"></div>
+                </div>
+                <div class="cien ct3 ct1-12">
+                    <div class="ct ct3-01"></div>
+                    <div class="ct ct3-02"></div>
+                    <div class="ct ct3-03"></div>
+                </div>
+                <div class="cien ct3 ct1-13">
+                    <div class="ct ct3-01"></div>
+                    <div class="ct ct3-02"></div>
+                    <div class="ct ct3-03"></div>
+                </div>
+                <div class="cien ct3 ct1-14">
+                    <div class="ct ct3-01"></div>
+                    <div class="ct ct3-02"></div>
+                    <div class="ct ct3-03"></div>
+                </div>
+
+                <!--    Portal obsidian      -->
+                <div class="obj kostka obs pt" id="p1t"></div>
+                <div class="obj kostka obs pl" id="p1l"></div>
+                <div class="obj kostka obs pr" id="p1r"></div>
+                <div class="obj kostka obs pb" id="p1b"></div>
+
+                <div class="obj kostka obs pt" id="p2t"></div>
+                <div class="obj kostka obs pl" id="p2l"></div>
+                <div class="obj kostka obs pr" id="p2r"></div>
+                <div class="obj kostka obs pb" id="p2b"></div>
+
+                <div class="obj kostka obs pt" id="p3t"></div>
+                <div class="obj kostka obs pl" id="p3l"></div>
+                <div class="obj kostka obs pr" id="p3r"></div>
+                <div class="obj kostka obs pb" id="p3b"></div>
+
+                <div class="obj kostka obs pt" id="p4t"></div>
+                <div class="obj kostka obs pl" id="p4l"></div>
+                <div class="obj kostka obs pr" id="p4r"></div>
+                <div class="obj kostka obs pb" id="p4b"></div>
+
+                <div class="obj kostka obs pt" id="p5t"></div>
+                <div class="obj kostka obs pl" id="p5l"></div>
+                <div class="obj kostka obs pr" id="p5r"></div>
+                <div class="obj kostka obs pb" id="p5b"></div>
+
+                <div class="obj kostka obs pt" id="p6t"></div>
+                <div class="obj kostka obs pl" id="p6l"></div>
+                <div class="obj kostka obs pr" id="p6r"></div>
+                <div class="obj kostka obs pb" id="p6b"></div>
+
+                <div class="obj kostka obs pt" id="p7t"></div>
+                <div class="obj kostka obs pl" id="p7l"></div>
+                <div class="obj kostka obs pr" id="p7r"></div>
+                <div class="obj kostka obs pb" id="p7b"></div>
+
+                <div class="obj kostka obs pt" id="p8t"></div>
+                <div class="obj kostka obs pl" id="p8l"></div>
+                <div class="obj kostka obs pr" id="p8r"></div>
+                <div class="obj kostka obs pb" id="p8b"></div>
+
+                <div class="obj kostka obs pt" id="p9t"></div>
+                <div class="obj kostka obs pl" id="p9l"></div>
+                <div class="obj kostka obs pr" id="p9r"></div>
+                <div class="obj kostka obs pb" id="p9b"></div>
+
+                <div class="obj kostka obs pt" id="p10t"></div>
+                <div class="obj kostka obs pl" id="p10l"></div>
+                <div class="obj kostka obs pr" id="p10r"></div>
+                <div class="obj kostka obs pb" id="p10b"></div>
+
+                <div class="obj kostka obs pt" id="p11t"></div>
+                <div class="obj kostka obs pl" id="p11l"></div>
+                <div class="obj kostka obs pr" id="p11r"></div>
+                <div class="obj kostka obs pb" id="p11b"></div>
+                
+                <div class="obj kostka obs pt" id="p12t"></div>
+                <div class="obj kostka obs pl" id="p12l"></div>
+                <div class="obj kostka obs pr" id="p12r"></div>
+                <div class="obj kostka obs pb" id="p12b"></div>
+
+                <div class="obj kostka obs pt" id="p13t"></div>
+                <div class="obj kostka obs pl" id="p13l"></div>
+                <div class="obj kostka obs pr" id="p13r"></div>
+                <div class="obj kostka obs pb" id="p13b"></div>
+
+                <div class="obj kostka obs pt" id="p14t"></div>
+                <div class="obj kostka obs pl" id="p14l"></div>
+                <div class="obj kostka obs pr" id="p14r"></div>
+                <div class="obj kostka obs pb" id="p14b"></div>
+
+                <!--    Portal portal frame      -->
+                <div class="obj kostka por" id="pf">
+                    <div class="obj kostka por" style="left: 50px;"></div>
+                    <div class="obj kostka por"style="top: -50px"></div>
+                    <div class="obj kostka por"style="top: -50px; left: 50px;"></div>
+                    <div class="obj kostka por"style="top: -100px"></div>
+                    <div class="obj kostka por"style="top: -100px; left: 50px;"></div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
