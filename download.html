@@ -7,9 +7,7 @@
     <title>Download</title>
 </head>
 <body>
-    <div>in case downloading doesn't start, click 
-        <a id="download" target="_blank" download>here</a>
-    </div>
+    <a id="download" download></a>
 
     <script>
         var download = document.getElementById('download');
@@ -19,6 +17,8 @@
         download.setAttribute('href', url);
 
         download.click();
+
+        window.history.back();
     </script>
 </body>
 </html>
