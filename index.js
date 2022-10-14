@@ -1,6 +1,6 @@
-function marker_nav(selected) {
-    sessionStorage.setItem("selected_item", selected);
-}
+// function marker_nav(selected) {
+//     sessionStorage.setItem("selected_item", selected);
+// }
 
 
 

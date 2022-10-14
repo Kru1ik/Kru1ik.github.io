@@ -1,3 +1,6 @@
+/*  Use this for projects css */
+
+
 :root {
     background: black;
     color: white;
@@ -9,9 +12,6 @@ body {
 } 
 h1, h2{
     text-align: center;
-}
-div {
-    
 }
 a {
     color: white;

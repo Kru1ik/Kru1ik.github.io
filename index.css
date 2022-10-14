@@ -1,6 +1,7 @@
 /* Kolory strony */
 :root {
     --text: rgb(224, 224, 224);
+    --button-text: rgb(192, 192, 192);
     --backgroud: rgb(16, 16, 16);
     --border: rgb(64, 64, 64);
 
@@ -16,7 +17,7 @@
 
 a {
     text-decoration: none;
-    color: var(--text);
+    color: var(--button-text);
     cursor: pointer;
 }
 
@@ -29,11 +30,6 @@ a {
 h2 {
     margin-top: 16px;
     margin-bottom: 0px;
-}
-
-header::before {
-    content: "website under construction";
-    color: rgb(162, 0, 0);
 }
 
 
@@ -82,6 +78,13 @@ header::before {
         margin: auto;
     
         transition: 0.3s
+    }
+
+    .button {
+        transition: 0.3s;
+    }
+    .button:hover  {
+        color: var(--text);
     }
 
     .button:hover > .marker {
