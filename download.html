@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Download</title>
+</head>
+<body>
+    <div>in case downloading doesn't start, click 
+        <a id="download" download>here</a>
+    </div>
+
+    <script>
+        var download = document.getElementById('download');
+        var path = window.location.search.substring(1);
+        var url = 'https://kru1ik.github.io/' + path;
+
+        download.setAttribute('href', url);
+
+        download.click();
+    </script>
+</body>
+</html>
