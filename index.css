@@ -27,6 +27,18 @@ a {
     font-size: 48px;
 }
 
+#wip {
+    color: grey;
+    animation-duration: 500ms;
+    animation-delay: 1s;
+    animation-timing-function: ease-out;
+    animation-name: wipAnimation;
+}
+@keyframes wipAnimation {
+    from {color: transparent;}
+    to {color: grey;}
+}
+
 h2 {
     margin-top: 16px;
     margin-bottom: 0px;
